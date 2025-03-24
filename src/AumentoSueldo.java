@@ -39,28 +39,31 @@ public class AumentoSueldo {
 	        
 	        // Determinar el porcentaje de aumento según el tipo de empleado
 	        double aumento = 0;
-	        if (tipoEmpleado.equals("programador")) {
-	            if (tiempoEnLaEmpresa > 5 && tiempoEnLaEmpresa < 10) {
+	        boolean antiguedadBaja = tiempoEnLaEmpresa > 5 && tiempoEnLaEmpresa < 10;
+			boolean antiguedadMedia = tiempoEnLaEmpresa >= 10 && tiempoEnLaEmpresa < 15;
+			boolean antiguedadAlta = tiempoEnLaEmpresa >= 15;
+			if (tipoEmpleado.equals("programador")) {
+	            if (antiguedadBaja) {
 	                aumento = 0.05;
-	            } else if (tiempoEnLaEmpresa >= 10 && tiempoEnLaEmpresa < 15) {
+	            } else if (antiguedadMedia) {
 	                aumento = 0.10;
-	            } else if (tiempoEnLaEmpresa >= 15) {
+	            } else if (antiguedadAlta) {
 	                aumento = 0.15;
 	            }
 	        } else if (tipoEmpleado.equals("analista")) {
-	            if (tiempoEnLaEmpresa > 5 && tiempoEnLaEmpresa < 10) {
+	            if (antiguedadBaja) {
 	                aumento = 0.06;
-	            } else if (tiempoEnLaEmpresa >= 10 && tiempoEnLaEmpresa < 15) {
+	            } else if (antiguedadMedia) {
 	                aumento = 0.12;
-	            } else if (tiempoEnLaEmpresa >= 15) {
+	            } else if (antiguedadAlta) {
 	                aumento = 0.18;
 	            }
 	        } else if (tipoEmpleado.equals("comercial")) {
-	            if (tiempoEnLaEmpresa > 5 && tiempoEnLaEmpresa < 10) {
+	            if (antiguedadBaja) {
 	                aumento = 0.04;
-	            } else if (tiempoEnLaEmpresa >= 10 && tiempoEnLaEmpresa < 15) {
+	            } else if (antiguedadMedia) {
 	                aumento = 0.08;
-	            } else if (tiempoEnLaEmpresa >= 15) {
+	            } else if (antiguedadAlta) {
 	                aumento = 0.12;
 	            }
 	        }
