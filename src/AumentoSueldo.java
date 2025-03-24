@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class AumentoSueldo {
 
+	private static final int SUELDO_COMERCIAL = 1400;
 	private static final int SUELDO_ANALISTA = 1700;
 	private static final int SUELDO_PROGRAMADOR = 1500;
 
@@ -23,7 +24,7 @@ public class AumentoSueldo {
 	                sueldo = SUELDO_ANALISTA;
 	                break;
 	            case "comercial":
-	                sueldo = 1400;
+	                sueldo = SUELDO_COMERCIAL;
 	                break;
 	            default:
 				String error = "Tipo de empleado no válido.";
