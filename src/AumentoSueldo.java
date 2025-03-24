@@ -3,6 +3,8 @@ import java.util.Scanner;
 
 public class AumentoSueldo {
 
+	private static final int SUELDO_PROGRAMADOR = 1500;
+
 	public static void main(String[] args) {
 		   Scanner scanner = new Scanner(System.in);
 	        
@@ -14,7 +16,7 @@ public class AumentoSueldo {
 	        double sueldo;
 	        switch (tipoEmpleado) {
 	            case "programador":
-	                sueldo = 1500;
+	                sueldo = SUELDO_PROGRAMADOR;
 	                break;
 	            case "analista":
 	                sueldo = 1700;
