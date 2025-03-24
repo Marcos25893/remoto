@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class AumentoSueldo {
 
+	private static final int SUELDO_ANALISTA = 1700;
 	private static final int SUELDO_PROGRAMADOR = 1500;
 
 	public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class AumentoSueldo {
 	                sueldo = SUELDO_PROGRAMADOR;
 	                break;
 	            case "analista":
-	                sueldo = 1700;
+	                sueldo = SUELDO_ANALISTA;
 	                break;
 	            case "comercial":
 	                sueldo = 1400;
