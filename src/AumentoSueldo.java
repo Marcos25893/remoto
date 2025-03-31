@@ -72,12 +72,16 @@ public class AumentoSueldo {
 	        double nuevoSueldo = calcularNuevoSueldo(sueldo, aumento);
 	        
 	        // Mostrar el resultado
-	        System.out.println("Tipo de empleado: " + tipoEmpleado);
-	        System.out.println("Sueldo base: " + sueldo + " €");
-	        System.out.println("Tu nuevo sueldo será: " + nuevoSueldo + " €");
+	        mostrarResultado(tipoEmpleado, sueldo, nuevoSueldo);
 	        
 	        scanner.close();
 	    }
+
+	private static void mostrarResultado(String tipoEmpleado, double sueldo, double nuevoSueldo) {
+		System.out.println("Tipo de empleado: " + tipoEmpleado);
+		System.out.println("Sueldo base: " + sueldo + " €");
+		System.out.println("Tu nuevo sueldo será: " + nuevoSueldo + " €");
+	}
 
 	private static double calcularNuevoSueldo(double sueldo, double aumento) {
 		double nuevoSueldo = sueldo + (sueldo * aumento);
