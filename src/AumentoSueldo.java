@@ -34,8 +34,7 @@ public class AumentoSueldo {
 	        }
 	        
 	        // Pedir años en la empresa
-	        System.out.print("Introduce tus años de experiencia en la empresa: ");
-	        int tiempoEnLaEmpresa = scanner.nextInt();
+	        int tiempoEnLaEmpresa = pedirAñosEmpresa(scanner);
 	        
 	        // Determinar el porcentaje de aumento según el tipo de empleado
 	        double aumento = 0;
@@ -76,6 +75,12 @@ public class AumentoSueldo {
 	        
 	        scanner.close();
 	    }
+
+	private static int pedirAñosEmpresa(Scanner scanner) {
+		System.out.print("Introduce los años que llevas en la empresa: ");
+		int tiempoEnLaEmpresa = scanner.nextInt();
+		return tiempoEnLaEmpresa;
+	}
 
 	private static void mostrarResultado(String tipoEmpleado, double sueldo, double nuevoSueldo) {
 		System.out.println("Tipo de empleado: " + tipoEmpleado);
