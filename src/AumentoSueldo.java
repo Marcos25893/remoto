@@ -69,7 +69,7 @@ public class AumentoSueldo {
 	        }
 	        
 	        // Calcular el nuevo sueldo
-	        double nuevoSueldo = sueldo + (sueldo * aumento);
+	        double nuevoSueldo = calcularNuevoSueldo(sueldo, aumento);
 	        
 	        // Mostrar el resultado
 	        System.out.println("Tipo de empleado: " + tipoEmpleado);
@@ -78,4 +78,9 @@ public class AumentoSueldo {
 	        
 	        scanner.close();
 	    }
+
+	private static double calcularNuevoSueldo(double sueldo, double aumento) {
+		double nuevoSueldo = sueldo + (sueldo * aumento);
+		return nuevoSueldo;
+	}
 	}
